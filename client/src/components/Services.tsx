@@ -1,5 +1,4 @@
-import React from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "../components/card";
 import { Building, Hammer, PenTool, Users } from "lucide-react";
 
 const services = [

@@ -1,5 +1,4 @@
-import React from "react";
-import { Button } from "./ui/button";
+import { Button } from "../components/button"
 import { ArrowRight } from "lucide-react";
 
 const Home = () => {
@@ -22,7 +21,7 @@ const Home = () => {
           Premium construction services with unmatched attention to detail and commitment to quality
         </p>
         <Button 
-          className="animate-slide-up bg-accent hover:bg-accent/90 text-primary font-semibold"
+          className="animate-slide-up bg-green  hover:bg-accent/90 text-primary font-semibold"
           style={{ animationDelay: "0.4s" }}
         >
           Explore Our Projects <ArrowRight className="ml-2 h-4 w-4" />

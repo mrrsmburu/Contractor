@@ -1,7 +1,7 @@
 import React from "react";
-import { Button } from "../components/ui/button";
-import { Input } from "../components/ui/input"; // Ensure this path is correct or update it to the correct module path
-import { Textarea } from "./ui/textarea"; // Ensure this path is correct or update it to the correct module path
+import { Button } from "../components/button"
+import { Input } from "../components/input"
+import { Textarea } from "../components/textarea"// Ensure this path is correct or update it to the correct module path
 import { Phone, Mail, MapPin } from "lucide-react";
 
 const Contact = () => {

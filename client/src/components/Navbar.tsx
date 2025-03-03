@@ -1,6 +1,5 @@
-import React from "react";
 import { useState } from "react";
-import { Button } from "../components/ui/button";
+import { Button } from "../components/button"
 import { Menu, X, Phone } from "lucide-react";
 
 const Navbar = () => {
