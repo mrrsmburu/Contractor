@@ -9,7 +9,7 @@ module.exports = {
       colors: {
         primary: "#1F2937", // Adjust based on your design (e.g., text color)
         secondary: "#6B7280", // Lighter gray for subtext
-        accent: "#FFD700", // Gold-like accent color
+        accent: "#D9B56B", // Gold-like accent color
         muted: "#F3F4F6", // Light gray background
         background: "#FFFFFF", // Default white background
       },

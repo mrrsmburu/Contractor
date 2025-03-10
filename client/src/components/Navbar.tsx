@@ -1,16 +1,17 @@
 import { useState } from "react";
-import { Button } from "../components/button"
+import { Link } from "react-router-dom";
+import { Button } from "../components/button";
 import { Menu, X, Phone } from "lucide-react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: "#", label: "Home" },
-    { href: "#services", label: "Services" },
-    { href: "#projects", label: "Projects" },
-    { href: "#about", label: "About" },
-    { href: "#contact", label: "Contact" },
+    { to: "/home", label: "Home" },
+    { to: "/services", label: "Services" },
+    { to: "/projects", label: "Projects" },
+    { to: "/about", label: "About" },
+    { to: "/contact", label: "Contact" },
   ];
 
   return (
@@ -18,20 +19,20 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <a href="/" className="text-xl font-bold text-primary">
+          <Link to="/" className="text-xl font-bold text-primary">
             FabStructure
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
-                href={link.href}
+                to={link.to}
                 className="text-secondary hover:text-primary transition-colors"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
             <Button className="bg-accent hover:bg-accent/90 text-primary">
               <Phone className="mr-2 h-4 w-4" />
@@ -58,14 +59,14 @@ const Navbar = () => {
           <div className="md:hidden py-4">
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.label}
-                  href={link.href}
+                  to={link.to}
                   className="text-secondary hover:text-primary transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
               <Button className="bg-accent hover:bg-accent/90 text-primary">
                 <Phone className="mr-2 h-4 w-4" />

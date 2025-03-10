@@ -4,10 +4,34 @@ import { Input } from "../components/input"
 import { Textarea } from "../components/textarea"// Ensure this path is correct or update it to the correct module path
 import { Phone, Mail, MapPin } from "lucide-react";
 
-const Contact = () => {
-  const handleSubmit = (e: React.FormEvent) => {
+const Contact: React.FC = () => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Add form submission logic here
+    const form = e.currentTarget;
+    const formData = {
+      name: (form.elements.namedItem("name") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      phone: (form.elements.namedItem("phone") as HTMLInputElement).value,
+      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+    };
+    try {
+      const response = await fetch('http://localhost:5000/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      if (response.ok) {
+        alert('Message sent successfully!');
+        form.reset(); // Clear form
+      } else {
+        alert('Failed to send message.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('An error occurred.');
+    }
   };
 
   return (
