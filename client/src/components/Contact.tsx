@@ -35,8 +35,8 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-4 bg-muted">
-      <div className="max-w-7xl mx-auto">
+    // <section id="contact" className="py-20 px-4 bg-muted">
+      <div id="contact" className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="animate-slide-up">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Get in Touch</h2>
@@ -79,7 +79,7 @@ const Contact: React.FC = () => {
           </form>
         </div>
       </div>
-    </section>
+    // </section>
   );
 };
 

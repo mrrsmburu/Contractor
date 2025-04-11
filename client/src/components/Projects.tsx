@@ -1,4 +1,7 @@
+
 import { Card, CardContent } from "../components/card";
+import React, { useRef } from 'react';
+
 
 const projects = [
   {
@@ -20,7 +23,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section className="py-20 px-4">
+    <section id="projects"className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Featured Projects</h2>
         <p className="text-secondary text-center mb-12 max-w-2xl mx-auto">

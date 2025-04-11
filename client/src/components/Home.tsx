@@ -1,9 +1,11 @@
+import React from "react";
 import { Button } from "../components/button"
 import { ArrowRight } from "lucide-react";
 
 const Home = () => {
   return (
-    <div className="relative min-h-screen pt-16">
+    // <section id="home" className="relative min-h-screen pt-16">
+    <div id="home"className="relative min-h-screen pt-16">
       <div className="absolute inset-0 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1487958449943-2429e8be8625"
@@ -28,6 +30,7 @@ const Home = () => {
         </Button>
       </div>
     </div>
+  // </section>
   );
 };
 

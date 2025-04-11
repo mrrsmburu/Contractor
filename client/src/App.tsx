@@ -1,5 +1,5 @@
 import React  from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { BrowserRouter as Router,Routes, Route } from "react-router-dom"
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Services from "./components/Services";
@@ -11,10 +11,10 @@ import "./index.css";
 const HomePage = () => (
   <>
     <Home />
-    <Services />
+    {/* <Services />
     <About />
     <Projects />
-    <Contact />
+    <Contact /> */}
   </>
 );
 
@@ -26,18 +26,16 @@ const ContactPage = () => <Contact />;
 
 const App: React.FC = () => {
   return (
-    <Router>
-      <main className="min-h-screen">
-        <Navbar />
-        <Routes>
-          <Route path="/home" element={<HomePage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-        </Routes>
-      </main>
-    </Router>
+    <main className="min-h-screen">
+      <Navbar />
+      <Routes>
+        <Route path="/home" element={<HomePage />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+    </main>
   )  
 };
 
